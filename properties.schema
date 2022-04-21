@@ -1,0 +1,40 @@
+{
+  "type": "object",
+  "$schema": "http://json-schema.org/draft-03/schema",
+  "id": "http://jsonschema.net",
+  "properties": {
+    "pluginLocations": {
+      "type": "object",
+      "properties": {
+        "config": {
+          "type": "object",
+          "properties": {
+            "_gtag": {
+              "type": "object",
+              "legend": "Google Analytics 4",
+              "properties": {
+                "_isEnabled": {
+                  "type": "boolean",
+                  "default": false,
+                  "title": "Is enabled",
+                  "inputType": "Checkbox",
+                  "help": "Enable Google Analytics tracking"
+                },
+                "_measurementId": {
+                  "type": "string",
+                  "required": true,
+                  "title": "Measurement ID",
+                  "inputType": "Text",
+                  "validators": [
+                    "required"
+                  ],
+                  "help": "Enter the measurement ID of the Google Analytics property to track"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
